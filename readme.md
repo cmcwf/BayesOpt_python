@@ -49,7 +49,7 @@ The optimization process follows an active learning loop implemented with **BayB
 
 2. **Surrogate Modeling:** Fit Gaussian Process (GP) surrogate models $f(\mathbf{x}) \sim \mathcal{GP}(m(\mathbf{x}), k(\mathbf{x}, \mathbf{x}'))$ to predict response metrics $y = f(\mathbf{x}) + \epsilon$.
 
-3. **Acquisition Function & Recommendation:** Compute acquisition scores $\alpha(\mathbf{x})$ (such as Expected Improvement $\text{EI}(\mathbf{x})$ or Upper Confidence Bound $\text{UCB}(\mathbf{x})$) to select candidate conditions:
+3. **Acquisition Function & Recommendation:** Compute acquisition scores $\alpha(\mathbf{x})$ (such as Expected Improvement $\text{EI}(\mathbf{x})$ or Upper Confidence Bound $\text{UCB}(\mathbf{x})$ ) to select candidate conditions:
 
    ```math
    \mathbf{x}_{\text{next}} = \arg\max_{\mathbf{x} \in \mathcal{X}} \alpha(\mathbf{x})
