@@ -51,9 +51,7 @@ The optimization process follows an active learning loop implemented with **BayB
 
 3. **Acquisition Function & Recommendation:** Compute acquisition scores $\alpha(\mathbf{x})$ (such as Expected Improvement $\text{EI}(\mathbf{x})$ or Upper Confidence Bound $\text{UCB}(\mathbf{x})$ ) to select candidate conditions:
 
-   ```math
-   \mathbf{x}_{\text{next}} = \arg\max_{\mathbf{x} \in \mathcal{X}} \alpha(\mathbf{x})
-   ```
+   $$\mathbf{x}_{\text{next}} = \operatorname*{argmax}_{\mathbf{x} \in \mathcal{X}} \alpha(\mathbf{x})$$
 
 4. **Experimental Execution:** Run laboratory experiments at $\mathbf{x}_{\text{next}}$ and measure output metrics (UPLC peak area, reaction yield).
 
